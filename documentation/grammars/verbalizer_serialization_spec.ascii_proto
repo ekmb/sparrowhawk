@@ -39,6 +39,14 @@ class_spec {
   }
 }
 class_spec {
+  semiotic_class: "ordinal"
+  style_spec {
+    record_spec {
+      field_path: "cardinal.number"
+    }
+  }
+}
+class_spec {
   semiotic_class: "time"
   style_spec {
     record_spec {
