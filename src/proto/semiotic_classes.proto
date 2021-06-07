@@ -149,6 +149,14 @@ message Measure {
   repeated string field_order = 9;
 }
 
+// A serial, e.g. a-52-gb-s, represents a combination of letters and numbers values
+// with possible dashes in between.
+message Serial {
+  // Set one of the following three.
+  required Cardinal cardinal = 1;
+  optional bool preserve_order = 2;
+}
+
 // A date, give in day, month year. 'style' could be used to control,
 // e.g. whether day=4, month=5, year=1997 is said "fourth of may nineteen ninety
 // seven", or "may the fourth nineteen ninety seven" 'era' is for era indicators
