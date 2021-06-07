@@ -7,8 +7,16 @@ import 'verbatim.grm' as v;
 
 # Combines all of the semiotic classes together.
 
+CARDINAL = LoadFstFromFar['cardinal_verbalize.far', 'CARDINAL'];
+ORDINAL = LoadFstFromFar['ordinal_verbalize.far', 'ORDINAL'];
+DECIMAL = LoadFstFromFar['decimal_verbalize.far', 'DECIMAL'];
+MEASURE = LoadFstFromFar['measure_verbalize.far', 'MEASURE'];
+TIME = LoadFstFromFar['time_verbalize.far', 'TIME'];
+DATE = LoadFstFromFar['date_verbalize.far', 'DATE'];
+WORD = LoadFstFromFar['word_verbalize.far', 'WORD'];
+
 export ALL = Optimize[
-  d.DATE | M.MEASURE | m.MONEY | n.CARDINAL_MARKUP | t.TIME | v.VERBATIM];
+  DATE | ORDINAL | DECIMAL| MEASURE | TIME | CARDINAL | WORD];
 
 # Exports the REDUP from money.
 export REDUP = m.REDUP;
